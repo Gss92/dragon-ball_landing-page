@@ -1,0 +1,79 @@
+@use 'variables';
+
+.episodes {
+    background-color: variables.$secondPageColor;
+    padding: 10vh 16vw;
+    text-align: center;
+
+    &__text {
+        max-width: 1024px;
+        margin: 0 auto 100px;
+
+        &__title {
+            font-family: Saiyan Sans;
+            font-weight: lighter;
+            margin-bottom: 50px;
+        }
+    }
+
+    &__content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        &__nav {
+            display: flex;
+            flex-direction: column;
+            width: 500px;
+        }
+
+        &__list {
+            list-style: none;
+
+            &__item {
+                display: none;
+                width: 100%;
+
+                img {
+                    width: 70%;
+                    border-radius: 50px;
+                    margin-bottom: 10px;
+                    box-shadow: #313131 5px 5px 5px;
+                    transition: hover, .5s ease;
+
+                    &:hover {
+                        transform: scale(1.7);
+                        box-shadow: #313131 12px 12px 30px;
+                    }
+                }
+
+                h5 {
+                    color: variables.$titleColorYellow;
+                }
+
+                span {
+                    display: block;
+                }
+
+                .item_title {
+                    margin-bottom: 10px;
+                }
+
+                .item_description {
+                    padding: 1em;
+                    background-color: variables.$descriptionBox;
+                    border-radius: 10px;
+                }
+
+                &--active {
+                    display: block;
+                    animation: fadeIn .5s linear;
+
+                    @keyframes fadeIn {
+                        from {opacity: 0}
+                        to {opacity: 1}
+                    }
+                }
+            }
+        }
+    }
+}

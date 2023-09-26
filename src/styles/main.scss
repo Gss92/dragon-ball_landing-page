@@ -1,0 +1,141 @@
+@use 'variables';
+@use 'hero';
+@use 'about';
+@use 'episodes';
+@use 'faq';
+@use 'footer';
+
+@font-face {
+    font-family: Saiyan Sans;
+    src: url(../fonts/Saiyan-Sans.ttf);
+}
+
+html {
+    overflow-x: hidden;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: variables.$mainPageColor;
+}
+
+@mixin title($fontSize: 40px) {
+    font-size: $fontSize;
+    letter-spacing: 2px;
+    font-family: Saiyan Sans;
+    font-weight: lighter;
+    text-transform: uppercase;
+    text-shadow: #000 3px 3px 3px;
+}
+
+@mixin text($fontSize: 18px) {
+    font-size: $fontSize;
+}
+
+.title--big {
+
+    &-yellow {
+        color: variables.$titleColorYellow;
+        @include title(70px);
+    }
+
+    &-orange {
+        color: variables.$titleColorOrange;
+        @include title(70px);
+    }
+}
+
+.title--medium {
+
+    &-yellow {
+        color: variables.$titleColorYellow;
+        @include title;
+    }
+
+    &-orange {
+        color: variables.$titleColorOrange;
+        @include title;
+    }
+}
+
+.title--small {
+
+    &-yellow {
+        color: variables.$titleColorYellow;
+        @include title(28px);
+    }
+
+    &-orange {
+        color: variables.$titleColorOrange;
+        @include title(28px);
+    }
+}
+
+.text--big {
+
+    &-dark {
+        color: variables.$textColorDark;
+        @include text(22px);
+    }
+
+    &-light {
+        color: variables.$textColorLight;
+        @include text(22px);
+    }
+}
+
+.text--medium {
+
+    &-dark {
+        color: variables.$textColorDark;
+        @include text;
+    }
+
+    &-light {
+        color: variables.$textColorLight;
+        @include text;
+    }
+}
+
+.text--small {
+
+    &-dark {
+        color: variables.$textColorDark;
+        @include text(14px);
+    }
+
+    &-light {
+        color: variables.$textColorLight;
+        @include text(14px);
+    }
+}
+
+.episodes__button {
+    padding: 10px;
+    margin-bottom: 1.5em;
+    font-size: 38px;
+    letter-spacing: 3px;
+    font-family: Saiyan Sans;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transition: hover, .5s ease;
+
+    &:hover {
+        color: variables.$titleColorYellow;
+        transform: scale(1.1);
+        text-shadow: #313131 5px 5px 5px;
+    }
+
+    &--active {
+        color: variables.$titleColorYellow;
+        transform: scale(1.1);
+        text-shadow: #313131 5px 5px 5px;
+    }
+}

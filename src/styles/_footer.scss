@@ -1,0 +1,45 @@
+@use 'variables';
+
+.footer {
+    background-image: url(../images/db-footer.png);
+    background-repeat: no-repeat;
+    background-position: -80px 100px;
+    padding: 10vw;
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+
+        &__description {
+            text-align: center;
+
+            h2 {
+                margin-bottom: 20px;
+            }
+        }
+
+        &__social-links {
+            margin-top: 50px;
+            
+            .links_list {
+                display: flex;
+                list-style: none;
+                margin-right: 100px;
+
+                &_link {
+                    padding: 1.5em;
+                    
+                    object {
+                        width: 48px;
+                        transition: transform, .5s ease;
+
+                        &:hover {
+                            transform: scale(1.2);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

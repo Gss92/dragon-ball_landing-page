@@ -1,0 +1,24 @@
+@use 'variables';
+
+.about {
+    background-image: url(../images/db-about.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: -250px;
+    background-color: variables.$imgBackColor;
+    min-width: 100vw;
+    min-height: 100vh;
+    padding: 10vh 16vw;
+
+    &__text {
+        text-align: center;
+
+        &__title {
+            margin-bottom: 50px;
+        }
+
+        &__description {
+            margin-bottom: 18px;
+        }
+    }
+}

@@ -1,0 +1,57 @@
+@use 'variables';
+
+.hero {
+    background-color: variables.$mainPageColor;
+    background-image: url(../images/db-hero.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 500px;
+    padding: 4.5vw;
+    min-height: 50vw;
+    text-align: center;
+    
+
+    &__content {
+        max-width: 700px;
+        animation: fadeIn 1.5s linear;
+
+        @keyframes fadeIn {
+            from {opacity: 0}
+            to {opacity: 1}
+        }
+
+        &__branding {
+            margin: 170px 0 10px;
+            
+            img {
+                width: 100%;
+                margin-bottom: 50px;
+                transition: transform .5s ease;
+
+                &:hover {
+                    transform: scale(1.05);
+                    
+                }
+            }
+        }
+
+        &__text {
+
+            h3 {
+                font-weight: bold;
+                font-size: calc(70px - 30px);
+            }
+
+            p {
+                margin-top: 36px;
+                font-weight: bold;
+            }
+
+            span {
+                display: block;
+                text-align: end;
+                margin-right: 80px;
+            }
+        }
+    }
+}
